@@ -1,0 +1,22 @@
+import time
+
+from rich.progress import Progress
+
+'''
+使用rich库的progress包，实现个性化的进度条
+
+在命令终端执行，可以看到动态的效果
+
+文档地址：https://rich.readthedocs.io/en/stable/progress.html
+'''
+
+with Progress() as progress:
+    task1 = progress.add_task("[red]Downloading...", total=1000)
+    task2 = progress.add_task("[green]Processing...", total=1000)
+    task3 = progress.add_task("[cyan]Cooking...", total=1000)
+
+    while not progress.finished:
+        progress.update(task1, advance=0.5)
+        progress.update(task2, advance=0.3)
+        progress.update(task3, advance=0.9)
+        time.sleep(0.02)
