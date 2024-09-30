@@ -1,3 +1,4 @@
 .idea
+.vscode
 *.param
 *batch_query_result.txt
