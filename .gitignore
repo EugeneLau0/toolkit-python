@@ -1,1 +1,3 @@
 .idea
+*.param
+*batch_query_result.txt
