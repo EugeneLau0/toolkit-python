@@ -17,7 +17,7 @@ config = load_db_config()
 if __name__ == '__main__':
     init_db(config)
     items = list()
-    count = 200
+    count = 10
     for i in range(1, count + 1):
         items.append(business.create_inventory_item(i))
     print('开始初始化数据：')
