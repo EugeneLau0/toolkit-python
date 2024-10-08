@@ -14,5 +14,8 @@ database:
   sslmode: require
 # 同步执行
 sync: true
+batch_record: 200
+concurrent_count: 10
+excel_output: true
 
 ```
