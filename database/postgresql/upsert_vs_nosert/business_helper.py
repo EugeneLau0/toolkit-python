@@ -45,7 +45,7 @@ def upsert_inventory_item(config, items: list):
     start_time = time.time()
     db.execute_sql_with_params(config=config, sql=sql, inventory_items=items)
     end_time = time.time()
-    return end_time - start_time
+    return round(end_time - start_time, 2)
 
 def insert_inventory_item(config, items: list):
     insert_sql = f"""
@@ -87,5 +87,5 @@ def insert_inventory_item(config, items: list):
     # 再update
     db.execute_sql(config=config, sql=update_sql)
     end_time = time.time()
-    return end_time - start_time
+    return round(end_time - start_time, 2)
 

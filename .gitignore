@@ -2,3 +2,4 @@
 .vscode
 *.param
 *batch_query_result.txt
+__pycache__
