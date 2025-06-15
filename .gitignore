@@ -3,3 +3,5 @@
 *.param
 *batch_query_result.txt
 __pycache__
+.env*
+!.env.example
